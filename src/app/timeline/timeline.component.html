@@ -1,0 +1,27 @@
+<label for="startTime">Start Time: </label>
+<input name="startTime" type="time" [(ngModel)]="startTime">
+<br>
+<label for="endTime">End Time: </label>
+<input name="endTime" type="time"[(ngModel)]="endTime">
+<button (click)="test()">test</button>
+
+<br>
+<div class="times">
+    <span *ngFor="let time of timeStamps"> {{ time }}
+
+    </span>
+</div>
+<div class="timeline">
+    <div class="hours">
+        <div *ngFor="let time of timeStamps" class="vertical-hours">
+            |
+        </div>
+    </div>
+    <div class="mins">
+        <div *ngFor="let min of timeMinutes" class="vertical-mins">|</div>
+    </div>
+    <div class="line">
+</div>
+
+
+</div>
